@@ -1,4 +1,6 @@
+import 'package:dice_app/styled_text.dart';
 import 'package:flutter/material.dart';
+import 'package:dice_app/gradien_container.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,13 +22,11 @@ class MyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
-        title: Center(child: Text("Dice App")),
+        backgroundColor: const Color.fromARGB(255, 191, 156, 248),
+        title: Center(child: StyledText("Dice App")),
       ),
 
-      backgroundColor: Colors.amber,
-
-      body: Center(child: Text("dice")),
+      body: GradientContainer(Colors.orange, Colors.pink),
     );
   }
 }
